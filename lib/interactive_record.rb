@@ -63,10 +63,12 @@ class InteractiveRecord
   
   def self.find_by(hash)
     binding.pry
-    hash_values = []
+    key = []
+    value = []
     hash.each do |k, v| 
-      key = k.to_s
-      value = v.to_s}
+      key << k.to_s
+      value << v.to_s
+    end
     sql = "SELECT * FROM students WHERE #{key[0]} = #{value}"
     DB[:conn].execute(sql)
   end
