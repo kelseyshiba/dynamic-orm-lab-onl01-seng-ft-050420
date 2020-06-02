@@ -68,7 +68,7 @@ class InteractiveRecord
       key << k.to_s
       value << v.to_s
     end
-    sql = "SELECT * FROM students WHERE #{key.join(",")} = #{value}"
+    sql = "SELECT * FROM students WHERE #{key.join(",")} = #{value.join(",")}"
     DB[:conn].execute(sql)
   end
   
