@@ -59,4 +59,5 @@ class InteractiveRecord
     sql = "SELECT * FROM students WHERE name = ?;"
     DB[:conn].execute(sql, name)
   end
+  
 end
