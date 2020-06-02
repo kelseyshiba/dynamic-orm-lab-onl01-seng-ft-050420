@@ -69,6 +69,7 @@ class InteractiveRecord
       value << v.to_s
     end
     sql = "SELECT * FROM students WHERE #{key} = #{value}"
+    binding.pry
     DB[:conn].execute(sql)
   end
   
