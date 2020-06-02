@@ -2,8 +2,7 @@ require_relative "../config/environment.rb"
 require 'active_support/inflector'
 
 class InteractiveRecord
-  attr_accessor :name, :grade
-  attr_reader :id
+  attr_accessor :id, :name, :grade
   
   def initialize(options={})
     options.each do  |property, value|
