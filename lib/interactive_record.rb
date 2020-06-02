@@ -6,6 +6,7 @@ class InteractiveRecord
   def initialize(options={})
     options.each do  |property, value|
       self.send("#{property}=", value)
+    end
   end
   
   def self.table_name
