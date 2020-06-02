@@ -54,7 +54,8 @@ class InteractiveRecord
     DB[:conn].execute(sql)
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{table_name_for_insert}")[0][0]
   end
-        # new_student.save
-        # expect(DB[:conn].execute("SELECT * FROM students WHERE name = 'Sam'")).to eq([{"id"=>1, "name"=>"Sam", "grade"=>11}])
-        # expect(new_student.id).to eq(1)
+  
+  def self.find_by_name(name)
+    
+  end
 end
