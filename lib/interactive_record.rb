@@ -62,6 +62,7 @@ class InteractiveRecord
   end
   
   def self.find_by(hash)
+    binding.pry
     hash.each {|k, v| key = k.to_s, value = v.to_s}
     sql = "SELECT * FROM students WHERE #{key[0]} = #{value}"
     DB[:conn].execute(sql)
